@@ -376,3 +376,7 @@ button{
 .pad_l_0{
     padding-left: 0px !important;
 }
+.note{
+    font-size: 13px;
+    color: #a9a9a9
+}

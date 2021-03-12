@@ -19,7 +19,7 @@ class Home extends Component {
         });
     }
 
-    detSearch = ()=>{
+    doSearch = ()=>{
         this.setState({ 
             text: ''
         });
@@ -27,6 +27,10 @@ class Home extends Component {
             searchStr:'&stateCode=' + this.state.text 
         });
          this.props.parkListget('&stateCode=' + this.state.text)
+    }
+
+    doReset = ()=>{
+        this.props.parkListget('')
     }
 
     componentDidMount(){
@@ -49,8 +53,8 @@ class Home extends Component {
             <div className="col-md-12">
             <div className="col-md-12 pad_l_0">
             <input type="text" onChange={(e)=> this.handleChangeFn(e)}   value={this.state.text} />
-            <button onClick={()=> this.detSearch()}>Park search</button>
-            <p>Note: Search parks by multiple US state codes single and multiple comma-separated</p>
+            <button onClick={()=> this.doSearch()}>Park search</button> <button onClick={()=> this.doReset()}>Reset</button>
+            <p className="note">Note: Search parks by multiple US state codes single and multiple comma-separated</p>
             </div>
             </div>
             </div>

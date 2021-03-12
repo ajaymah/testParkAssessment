@@ -1,4 +1,3 @@
-
 export const setParkUser = (arr) => ({
     type: 'PARK_LIST',
     parkList:arr
