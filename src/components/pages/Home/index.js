@@ -30,6 +30,9 @@ class Home extends Component {
     }
 
     doReset = ()=>{
+         this.setState({ 
+            searchStr:'' 
+        });
         this.props.parkListget('')
     }
 
